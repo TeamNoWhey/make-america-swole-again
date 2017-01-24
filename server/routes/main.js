@@ -2,10 +2,8 @@ console.log('This is landing page')
 var express = require('express');
 var router = express.Router();
 
-router.get('/', function(req, res, next) {
-	res.send('hello from the landing page');
-});
-
-
+router.get('/', (req, res, next) => {
+  res.sendFile(path.join(__dirname, '../index.js'));
+})
 
 module.exports = router;
