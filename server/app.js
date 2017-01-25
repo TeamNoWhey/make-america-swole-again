@@ -21,14 +21,14 @@ app.use('/workout', workout);
 app.use('/feed', feed);
 
 
-//error handler
+//handler for client side error
 app.use(function(req, res, next){
   var err = new Error(`404: ${req.originalUrl} has not been found. Please try another url`);
   err.status = 404;
   next(err);
 });
 
-
+//handler for server side error
 app.use(function(err, req, res, next){
 	res.status(500).send({
     message: err.message,
