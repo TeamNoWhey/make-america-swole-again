@@ -1,9 +1,9 @@
 var express = require('express');
-var path = require('path');
 var app = express();
+var path = require('path');
 
-var middleware = require('./config/middleware.js')(app, express);
-var routes = require('./config/routes.js')(app, express);
+// var middleware = require('./config/middleware.js')(app, express);
+// var routes = require('./config/routes.js')(app, express);
 
 var port = process.env.PORT || 8080;
 var server = app.listen(port, () => {
