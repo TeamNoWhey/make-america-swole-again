@@ -32,5 +32,8 @@
     "router": "^1.1.4",
     "serve-favicon": "^2.3.2",
     "static-favicon": "^2.0.0-alpha"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }
