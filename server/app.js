@@ -23,14 +23,18 @@ app.use('/', landingPage);
 // app.use('/feed', feed);
 
 
+app.use(function(req, res) {
+  // Use res.sendfile, as it streams instead of reading the file into memory.
+  res.sendfile(path.resolve(__dirname + '/../client/index.html'));
+});
 //error handler
-app.use(function(err, res, req, next){
-	res.status(err.status || 500);
-    res.render('error', {
-        message: err.message,
-        error: err
-    });
-})
+// app.use(function(err, res, req, next){
+//  res.status(err.status || 500);
+//     res.render('error', {
+//         message: err.message,
+//         error: err
+//     });
+// })
 
 var port = process.env.PORT || 8080;
 console.log('port:', port)

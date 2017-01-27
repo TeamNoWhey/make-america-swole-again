@@ -13,8 +13,8 @@ angular.module('masa.workout', [])
     $scope.exercises.push({'id':'choice'+newItemNo});
   };
 
-
-
-
+  $scope.saveWorkout = function(){
+  	workoutHistory.storeWorkoutHistory($scope.exercises);
+  }
 
 });
