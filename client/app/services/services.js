@@ -7,20 +7,20 @@ app.factory('workoutHistory', function ($http) { // throw into workout planner c
   // (stretch) will need to make a GET request to the server in order to fetch a list of all the exercises for autocomplete
   //(probably want to cache this)
 
-  var storeworkoutHistory = function(data){
+  var storeWorkout = function(data){
     return $http({
       method: 'POST',
       url: '/workoutHistory', 
       data: data
     })
     .then(function(res){
-      console.log('this is res.data:', res.data)
+      console.log('Sucessfully posted workout data:', res.data)
       return res.data;
     })
   }
 
   return {
-    storeworkoutHistory: storeworkoutHistory
+    storeWorkout: storeWorkout
   };
 });
 //   // var changeViewShorten = function() {
