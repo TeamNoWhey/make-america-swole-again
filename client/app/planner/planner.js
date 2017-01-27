@@ -27,6 +27,7 @@ app.controller('PlannerCtrl', function($scope){
 
   }
 
+// }
 
 //   $timeout (function() {
 //     console.log('timeout excercises', this.exercises);
