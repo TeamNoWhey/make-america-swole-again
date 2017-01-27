@@ -1,6 +1,6 @@
-angular.module('masa.workout', [])
+var app = angular.module('Planner', []);
 
-.controller('WorkoutCtrl', function($scope){
+app.controller('PlannerCtrl', function($scope){
 
   // $scope.exercises = [];
   $scope.exercisesExample = [
@@ -9,12 +9,34 @@ angular.module('masa.workout', [])
     {name: 'db thrusters', sets: 3, reps: 12, weight: 30}
   ];
 
-  $scope.addExercise = function(passInFormInputs) {
-    $scope.exercises.push({'id':'choice'+newItemNo});
-  };
+  // $scope.exercises = [1,2,3];
+  $scope.newExercise = {};
+  $scope.exercises = [];
+
 
   $scope.saveWorkout = function(){
   	workoutHistory.storeWorkoutHistory($scope.exercises);
   }
+
+  $scope.add = function() {
+    console.log('Hey add button worked!');
+    $scope.exercises.push(this.newExercise);
+    this.newExercise = {};
+    // $scope.workouts.push
+    console.log(this.exercises);
+
+  }
+
+
+//   $timeout (function() {
+//     console.log('timeout excercises', this.exercises);
+//   }, 15000
+// );
+
+
+// app.factory('addWorkout', function() {
+//   this.add = function () {
+
+// }
 
 });
