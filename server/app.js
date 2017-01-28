@@ -42,19 +42,6 @@ app.use(function(req, res) {
 });
 
 
-//error handler
-// app.use(function(err, res, req, next){
-
-//  res.status(err.status || 500);
-
-// 	res.status(err.status || 500);
-
-//     res.render('error', {
-//         message: err.message,
-//         error: err
-//     });
-// })
-
 var port = process.env.PORT || 8080;
 console.log('port:', port)
 
