@@ -64,27 +64,7 @@ var app = angular.module('masa.services', [])
 
   return {
     storeWorkout: storeWorkout
-<<<<<<< HEAD
-  };
-});
-//   // var changeViewShorten = function() {
-//   //   $scope.changeView = function(view) {
-//   //     $location.path(view);
-//   //   };
-//   // };
-// })
-=======
-    // getAll: getAll,
-    // addOne: addOne
-  };
-
-  // var changeViewShorten = function() {
-  //   $scope.changeView = function(view) {
-  //     $location.path(view);
-  //   };
-  // };
-});
->>>>>>> 406623cb87ec30d92cea0212ea3431f7f8e235cc
+};
 // .factory('Auth', function ($http, $location, $window) {
 //   // Don't touch this Auth service!!!
 //   // it is responsible for authenticating our user
