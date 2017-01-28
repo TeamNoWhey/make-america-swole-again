@@ -1,10 +1,13 @@
+
 var app = angular.module('masa.services', [])
 
-app.factory('workoutHistory', function ($http) { // throw into workout planner controller
+.factory('WorkoutsFac', function ($http) { // throw into workout planner controller
+
 
   // need a post of all the exercises data to the server for storage into the db
   // (stretch) will need to make a GET request to the server for fetching of target weight from the db
   // (stretch) will need to make a GET request to the server in order to fetch a list of all the exercises for autocomplete
+
   //(probably want to cache this)
 
   var storeWorkout = function(data){
@@ -18,9 +21,50 @@ app.factory('workoutHistory', function ($http) { // throw into workout planner c
       return res.data;
     })
   }
+  //    (probably want to cache this)
+
+
+  var storeWorkout = function(exercisesData) {
+    return $http({
+      method: 'POST',
+      url: '/workoutHistory',
+      data: exercisesData
+    })
+    .then(function(resp) {
+      console.log('Successfully posted the data server side where it can be stored in the user\'s db:', resp.data);
+      return resp.data;
+    })
+    .catch(function(err) {
+      console.error(err);
+    })
+  };
+
+
+
+  // var getAll = function() { 
+  //   return $http({
+  //     method: 'GET',
+  //     url: '/api/links'
+  //   })
+  //   .then(function (resp) {
+  //     return resp.data;
+  //   });
+  // };
+
+  // var addOne = function(url) {
+  //   return $http({
+  //     method: 'POST',
+  //     url: '/api/links',
+  //     data: url,
+  //   })
+  //   .then(function (resp) {
+  //     return resp;
+  //   });
+  // };
 
   return {
     storeWorkout: storeWorkout
+<<<<<<< HEAD
   };
 });
 //   // var changeViewShorten = function() {
@@ -29,6 +73,18 @@ app.factory('workoutHistory', function ($http) { // throw into workout planner c
 //   //   };
 //   // };
 // })
+=======
+    // getAll: getAll,
+    // addOne: addOne
+  };
+
+  // var changeViewShorten = function() {
+  //   $scope.changeView = function(view) {
+  //     $location.path(view);
+  //   };
+  // };
+});
+>>>>>>> 406623cb87ec30d92cea0212ea3431f7f8e235cc
 // .factory('Auth', function ($http, $location, $window) {
 //   // Don't touch this Auth service!!!
 //   // it is responsible for authenticating our user
