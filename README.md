@@ -51,7 +51,7 @@ http://quotes.rest/qod.json?category=inspire
 
 ## The Database
 
-M.A.S.A uses a PostgreSQL for its relational user and exercise data. In the server folder there are four schemas tables: users, users info, exercises, and workout history. Something to note is that users table contains information about the user's account, while the user info table hold information about the user's physicality, such as sex, weight, and age. 
+M.A.S.A uses a PostgreSQL for its relational user and exercise data. In the server folder there are four schemas tables: users, users info, exercises, and workout history. Something to note is that users table contains information about the user's account, while the user info table holds information about the user's physicality, such as sex, weight, and age. 
 
 For mac users we recommend downloading the PostgreSQL app in order to more easily access and manipulate the database.
 
