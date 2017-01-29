@@ -27,19 +27,33 @@ We wanted to create an app that inspires and tracks user's progress as they hit 
 
 Y'all it's going to be YUGE! And even more important, so are you!
 
-## Frameworks That Make It Amazing
+## Our Amazing Tech
 
 Angular
 PostgreSQL 
 Express JS
 Node
 
+## All of Our Dependencies to Make This Awesomer
+
+Body-Parser,
+Express,
+Knex,
+Morgan,
+Passport,
+Pg,
+Router
+
 ## Our Quote of the Day API
 
 http://quotes.rest/qod.json?category=inspire
 
 
+## The Database
 
+M.A.S.A uses a PostgreSQL for its relational user and exercise data. In the server folder there are four schemas tables: users, users info, exercises, and workout history. Something to note is that users table contains information about the user's account, while the user info table hold information about the user's physicality, such as sex, weight, and age. 
+
+For mac users we recommend downloading the PostgreSQL app in order to more easily access and manipulate the database.
 
 ## Our Engineers and Fitness Gurus
 
@@ -49,7 +63,8 @@ Forrest Miller,
 and Tin Nguyen
 
 
-## Features That We Wanted To Add: 
+## Features That We Wanted To Add:
+ Autocomplete for entering in a workout 
  An interval timer
  Calories calculator and counter
  Tracking user's weight loss/gain
