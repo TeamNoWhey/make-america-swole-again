@@ -1,6 +1,8 @@
 var app = angular.module('Planner', ['masa.services']);
 
+
 app.controller('PlannerCtrl', ['$scope', 'WorkoutsFac', function($scope, WorkoutsFac) {
+
   $scope.newExercise = {};
   $scope.exercises = [];
 

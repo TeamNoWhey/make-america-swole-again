@@ -1,10 +1,26 @@
-angular.module('masa.services', [])
+
+var app = angular.module('masa.services', [])
 
 .factory('WorkoutsFac', function ($http) { // throw into workout planner controller
+
 
   // need a post of all the exercises data to the server for storage into the db
   // (stretch) will need to make a GET request to the server for fetching of target weight from the db
   // (stretch) will need to make a GET request to the server in order to fetch a list of all the exercises for autocomplete
+
+  //(probably want to cache this)
+
+  var storeWorkout = function(data){
+    return $http({
+      method: 'POST',
+      url: '/workoutHistory', 
+      data: data
+    })
+    .then(function(res){
+      console.log('Sucessfully posted workout data:', res.data)
+      return res.data;
+    })
+  }
   //    (probably want to cache this)
 
 
@@ -25,6 +41,7 @@ angular.module('masa.services', [])
     //   console.error(err);
     // })
   };
+
 
 
   // var getAll = function() { 
@@ -50,16 +67,7 @@ angular.module('masa.services', [])
 
   return {
     storeWorkout: storeWorkout
-    // getAll: getAll,
-    // addOne: addOne
-  };
-
-  // var changeViewShorten = function() {
-  //   $scope.changeView = function(view) {
-  //     $location.path(view);
-  //   };
-  // };
-});
+};
 // .factory('Auth', function ($http, $location, $window) {
 //   // Don't touch this Auth service!!!
 //   // it is responsible for authenticating our user
