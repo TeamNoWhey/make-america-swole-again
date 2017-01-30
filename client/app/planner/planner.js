@@ -24,9 +24,9 @@ app.controller('PlannerCtrl', ['$scope', 'WorkoutsFac', '$window', function($sco
   };
 
   // fake. comment out later
-  $scope.seeWorkoutHistory = function() {
-    console.log('trying to see if we can get user exercise and workout data back from db');
-    var history = WorkoutsFac.getWorkoutHistory();
-    console.log('this is the history:', history);
-  }
+  // $scope.seeWorkoutHistory = function() {
+  //   console.log('trying to see if we can get user exercise and workout data back from db');
+  //   var history = WorkoutsFac.getWorkoutHistory();
+  //   console.log('this is the history:', history);
+  // }
 }]);

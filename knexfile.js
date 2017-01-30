@@ -7,7 +7,7 @@ module.exports = {
     connection: {
       // host: 'postgres://localhost/masa',
       // user: 'ForrestMac',
-      database: 'masa',
+      database: 'masa-db',
       //REMINDER change back to masa-db
     },
     migrations: {
