@@ -82,6 +82,8 @@ angular.module('masa.services', [])
   };
 
   var signout = function () {
+    console.log('Signout clicked')
+    $window.localStorage.removeItem('user');
     $window.localStorage.removeItem('masaToken');
     $location.path('/signin');
   };
