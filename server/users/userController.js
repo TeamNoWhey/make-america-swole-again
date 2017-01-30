@@ -94,6 +94,7 @@ module.exports = {
         return user;
       })
       .then(function(user) {
+      console.log('signup user:', user);
         console.log('giving user jwt token');
         // create token to send back for auth
         var token = jwt.encode(user[0].username, 'secret');
@@ -154,6 +155,7 @@ module.exports = {
     // then decode the token, which ends up being the user object
     // check to see if that user exists in the database
     var token = req.headers['x-access-token'];
+    console.log('Checkauth ran');
     if (!token) {
       next(new Error('No token'));
     } else {
@@ -174,6 +176,20 @@ module.exports = {
         });
     }
   }
+<<<<<<< HEAD
+=======
+
+};
+
+
+
+
+
+
+
+
+
+>>>>>>> Signed in returns token now.
 
 };
 
