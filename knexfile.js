@@ -5,12 +5,20 @@ module.exports = {
   development: {
     client: 'postgresql',
     connection: {
-      database: 'masa-db'
+      // host: 'postgres://localhost/masa',
+      // user: 'ForrestMac',
+      database: 'masa',
+      //REMINDER change back to masa-db
+    },
+    migrations: {
+      directory: './migrations/'
     },
     seeds: {
       directory: './seeds/'
     } 
   }
+
+  
   // development: {
   //   client: 'postgresql',
   //   connection: {
