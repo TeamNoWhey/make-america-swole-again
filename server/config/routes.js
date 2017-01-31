@@ -1,4 +1,3 @@
-// var linksController = require('../links/linkController.js');
 var userController = require('../users/userController.js');
 var helpers = require('./helpers.js'); // our custom middleware
 var path = require('path');
@@ -22,9 +21,5 @@ module.exports = function (app, express) {
     res.sendfile(path.resolve(__dirname + '/../../client/index.html'));
   });
 
-  // // If a request is sent somewhere other than the routes above,
-  // // send it through our custom error handler
-  // app.use(helpers.errorLogger);
-  // app.use(helpers.errorHandler);
 };
 

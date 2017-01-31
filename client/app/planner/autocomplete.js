@@ -1,12 +1,10 @@
-// ToDo
-// Change line 10 to match angular app
-// Get Dependencies from codepen
+// This is vestigial code of content that we cut, leaving it for you, depeding on how you
+// want to import the stringed data from listofworkouttypes to line 64
 
 (function () {
   'use strict';
 
 // **** Import list of workout types ****
-var workoutList = require('./listofworkouttypes.js');
 
   angular
       .module('MyApp',['ngMaterial', 'ngMessages', 'material.svgAssetsCache'])

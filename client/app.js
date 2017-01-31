@@ -29,9 +29,3 @@ app.config(function($routeProvider, $locationProvider, $httpProvider)  {
   $locationProvider.html5Mode(true);
 
 })
-
-
-// app.controller('FitnessAppCtrl', function($scope) {
-
-//   //Empty in case it's needed for something
-// });

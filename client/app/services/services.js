@@ -10,8 +10,6 @@ angular.module('masa.services', [])
     })
     .then(function(res) {
       console.log('Successfully posted the data server side where it can be stored in the user\'s db:', res.data);
-      // console.log('data that was sent:', exercisesData);
-      // return res;
     }, function(err) {
       console.error(err);
     })
